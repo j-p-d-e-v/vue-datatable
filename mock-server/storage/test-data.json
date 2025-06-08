@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "role": "Admin",
+    "status": "Active",
+    "created_at": "2024-01-12"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "role": "User",
+    "status": "Inactive",
+    "created_at": "2023-11-03"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Lee",
+    "email": "charlie@example.com",
+    "role": "Moderator",
+    "status": "Pending",
+    "created_at": "2024-03-08"
+  },
+  {
+    "id": 4,
+    "name": "Diana Ross",
+    "email": "diana@example.com",
+    "role": "User",
+    "status": "Active",
+    "created_at": "2024-02-20"
+  },
+  {
+    "id": 5,
+    "name": "Ethan Wright",
+    "email": "ethan@example.com",
+    "role": "Admin",
+    "status": "Suspended",
+    "created_at": "2023-12-15"
+  },
+  {
+    "id": 6,
+    "name": "Fiona Garcia",
+    "email": "fiona@example.com",
+    "role": "User",
+    "status": "Active",
+    "created_at": "2024-01-29"
+  },
+  {
+    "id": 7,
+    "name": "George Hill",
+    "email": "george@example.com",
+    "role": "Moderator",
+    "status": "Inactive",
+    "created_at": "2024-03-11"
+  },
+  {
+    "id": 8,
+    "name": "Hannah Clark",
+    "email": "hannah@example.com",
+    "role": "Admin",
+    "status": "Active",
+    "created_at": "2024-04-02"
+  },
+  {
+    "id": 9,
+    "name": "Ian Murphy",
+    "email": "ian@example.com",
+    "role": "User",
+    "status": "Pending",
+    "created_at": "2023-10-22"
+  },
+  {
+    "id": 10,
+    "name": "Jasmine Patel",
+    "email": "jasmine@example.com",
+    "role": "User",
+    "status": "Suspended",
+    "created_at": "2024-01-03"
+  },
+  {
+    "id": 11,
+    "name": "Kyle Nguyen",
+    "email": "kyle@example.com",
+    "role": "Moderator",
+    "status": "Active",
+    "created_at": "2024-02-07"
+  },
+  {
+    "id": 12,
+    "name": "Laura Kim",
+    "email": "laura@example.com",
+    "role": "Admin",
+    "status": "Active",
+    "created_at": "2024-03-19"
+  },
+  {
+    "id": 13,
+    "name": "Michael Brown",
+    "email": "michael@example.com",
+    "role": "User",
+    "status": "Inactive",
+    "created_at": "2023-11-18"
+  },
+  {
+    "id": 14,
+    "name": "Natalie Adams",
+    "email": "natalie@example.com",
+    "role": "Moderator",
+    "status": "Active",
+    "created_at": "2024-04-14"
+  },
+  {
+    "id": 15,
+    "name": "Oscar Diaz",
+    "email": "oscar@example.com",
+    "role": "User",
+    "status": "Pending",
+    "created_at": "2024-02-28"
+  },
+  {
+    "id": 16,
+    "name": "Paula Evans",
+    "email": "paula@example.com",
+    "role": "Admin",
+    "status": "Suspended",
+    "created_at": "2023-12-09"
+  },
+  {
+    "id": 17,
+    "name": "Quinn Baker",
+    "email": "quinn@example.com",
+    "role": "User",
+    "status": "Active",
+    "created_at": "2024-03-01"
+  },
+  {
+    "id": 18,
+    "name": "Rachel Lee",
+    "email": "rachel@example.com",
+    "role": "Moderator",
+    "status": "Inactive",
+    "created_at": "2024-01-18"
+  },
+  {
+    "id": 19,
+    "name": "Steve Wilson",
+    "email": "steve@example.com",
+    "role": "User",
+    "status": "Active",
+    "created_at": "2024-04-06"
+  },
+  {
+    "id": 20,
+    "name": "Tina Zhang",
+    "email": "tina@example.com",
+    "role": "Admin",
+    "status": "Pending",
+    "created_at": "2024-02-12"
+  }
+]

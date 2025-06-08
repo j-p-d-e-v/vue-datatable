@@ -1,0 +1,5 @@
+dist
+.vite
+node_modules
+mock-server/__pycache__
+mock-server/*.pyc
