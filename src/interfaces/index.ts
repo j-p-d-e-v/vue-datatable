@@ -1,2 +1,2 @@
-export type { Header } from "./Header";
+export type { Column } from "./Column";
 export type { Item } from "./Item";

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { data as test_data } from "./assets/test-data.js";
 import DataTable from "./components/DataTable.vue";
-import { Item, Header } from "./interfaces/index";
+import { Item, Column } from "./interfaces/index";
 const columns = ref<Header[]>([]);
 const rows = ref<Item[]>([]);
-
+const total_pages = ref<number>(0);
+const limit = ref<number>(10);
 
 interface Response {
   data: any[],
@@ -14,10 +14,13 @@ interface Response {
   total: number
 }
 
-async function loadData(page: number, limit: number) {
-  const url = `http://192.168.211.128:8000/data?page=${page}&limit=${limit}`;
+async function loadData(page: number, search_value: string) {
+  let search = search_value ?? "";
+  const url = `http://192.168.211.128:8000/data?page=${page}&limit=${limit.value}&search=${search}`;
   const response = await fetch(url);
   const result: Response = await response.json();
+  limit.value = result.limit;
+  total_pages.value = Math.floor(result.total / limit.value);
   columns.value = [];
   rows.value = [];
   [
@@ -30,7 +33,7 @@ async function loadData(page: number, limit: number) {
       columns.value.push({
         label: item[1],
         value: item[0],
-      } as Header);
+      } as Column);
     });
   result.data.forEach((item) => {
     let data: Item = {};
@@ -41,20 +44,24 @@ async function loadData(page: number, limit: number) {
   });
 }
 
+function searchData(value: string) {
+  loadData(1, value);
+}
+
 onMounted(async () => {
-  await loadData(1, 5);
+  await loadData(1);
 
 });
 
-function getPageSelected(value: number) {
-  console.log("got page selected", value);
-  loadData(value, 5)
+function getPageSelected(value: number, search: string) {
+  loadData(value, search)
 }
 </script>
 
 <template>
   <div class="p-2">
-    <DataTable :columns="columns" :rows="rows" :total_pages="4" :current_page="1" @page-selected="getPageSelected" />
+    <DataTable :columns="columns" :rows="rows" :total_pages="total_pages" :current_page="1"
+      @page-selected="getPageSelected" @search="searchData" />
   </div>
 </template>
 
