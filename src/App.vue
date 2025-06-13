@@ -16,7 +16,7 @@ interface Response {
 
 async function loadData(page: number, search_value: string) {
   let search = search_value ?? "";
-  const url = `http://192.168.211.128:8000/data?page=${page}&limit=${limit.value}&search=${search}`;
+  const url = `http://localhost:8000/data?page=${page}&limit=${limit.value}&search=${search}`;
   const response = await fetch(url);
   const result: Response = await response.json();
   limit.value = result.limit;
@@ -33,6 +33,8 @@ async function loadData(page: number, search_value: string) {
       columns.value.push({
         label: item[1],
         value: item[0],
+        sortable: true,
+        sort_order: "ASC"
       } as Column);
     });
   result.data.forEach((item) => {
@@ -60,7 +62,7 @@ function getPageSelected(value: number, search: string) {
 
 <template>
   <div class="p-2">
-    <DataTable :columns="columns" :rows="rows" :total_pages="total_pages" :current_page="1"
+    <DataTable :columns="columns" :rows="rows" :total_pages="total_pages" :current_page="1" :height="300"
       @page-selected="getPageSelected" @search="searchData" />
   </div>
 </template>

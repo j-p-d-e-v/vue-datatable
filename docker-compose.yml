@@ -1,0 +1,11 @@
+services:
+  vue_data_table_ui_dev:
+    image: node:latest
+    container_name: vue_data_table_ui_dev
+    working_dir: /app
+    platform: linux/amd64
+    volumes:
+      - .:/app
+    ports:
+      - 7060:5173
+    tty: true
