@@ -14,6 +14,22 @@ export default defineConfig({
       useFsEvents: true,
     },
   },
+  build: {
+    lib: {
+      "entry": "src/index.ts",
+      "name": "VDataTablePlugin",
+      "fileName": (format) => `v-data-table-plugin.${format}.js`,
+    },
+    rollupOptions: {
+      external: "vue",
+      output: {
+        globals: {
+          vue: "Vue"
+        },
+        exports: "named", 
+      }
+    }
+  },
   plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
     alias: {

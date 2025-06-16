@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                  // Target modern JavaScript
+    "module": "ESNext",                  // Use ESNext module syntax
+    "moduleResolution": "Node",         // Resolve modules like Node.js
+    "strict": true,                     // Enable strict type checking
+    "esModuleInterop": true,            // Ensure compatibility with CommonJS
+    "skipLibCheck": true,               // Skip type checking of dependencies
+    "declaration": true,                // Generate .d.ts files
+    "emitDeclarationOnly": true,        // Only emit type declarations (no .js files)
+    "declarationDir": "dist",           // Output .d.ts files to the dist folder
+    "outDir": "dist",                   // Output compiled files to dist folder
+    "allowJs": true,                    // Allow JavaScript files
+    "jsx": "preserve"                   // Support JSX/TSX files (if applicable)
+  },
+  "include": [
+    "src/**/*.ts",                      // Include TypeScript files
+    "src/**/*.vue"                      // Include Vue Single-File Components
+  ],
+  "exclude": [
+    "node_modules",                     // Exclude node_modules
+    "dist"                              // Exclude the output folder
+  ]
+}

@@ -1,4 +1,23 @@
-# vue-data-table
+# Vue Data Table
+A simple vue data table.
+
+
+# Dependencies
+
+```
+npm install -D vue-tsc 
+```
+
+# Development
+
+```
+yarn dev
+```
+
+# Build
+```
+yarn build
+```
 
 ## TODO
 - [ ] Column Sorting
