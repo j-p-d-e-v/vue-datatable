@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import DataTable from "./components/DataTable.vue";
-import { Item, Column, ColumnFilter } from "./interfaces/index";
-import Test from "./test/Test.vue";
+import { Item, Column, ColumnFilter } from "../interfaces/index";
 const columns = ref<Column[]>([]);
 const rows = ref<Item[]>([]);
 const total_pages = ref<number>(0);
@@ -48,6 +46,7 @@ async function loadData(page: number, search_value?: string) {
 }
 
 function loadColumnFilterValues(item: Column) {
+  console.log(item.filter_options);
   item.filter_options = [{
     "label": "Test 1",
     "value": "test-1",
@@ -80,15 +79,9 @@ function getPageSelected(value: number, search: string) {
 
 <template>
   <div class="p-2">
-    <h3 class="font-semibold text-red-500">DEVELOPMENT VERSION</h3>
     <DataTable title="My Data" :columns="columns" :rows="rows" :total_pages="total_pages" :current_page="1" :height="300"
     @show-column-filter="loadColumnFilterValues" @apply-filter="applyFilter"
       @page-selected="getPageSelected" @search="searchData" />
-    <div class="mt-5 mb-5">
-      <hr/>
-    </div>
-    <h3 class="font-semibold text-green-500">RELEASE VERSION</h3>
-    <Test />
   </div>
 </template>
 

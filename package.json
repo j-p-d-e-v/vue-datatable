@@ -22,7 +22,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
     "tailwindcss": "^4.1.8",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-data-table": "https://github.com/j-p-d-e-v/vue-datatable"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
