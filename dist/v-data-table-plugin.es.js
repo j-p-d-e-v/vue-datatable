@@ -1,3 +1,4 @@
+import './vue-data-table.css';
 import { defineComponent as j, ref as d, createElementBlock as s, openBlock as r, createElementVNode as l, createCommentVNode as i, toDisplayString as c, normalizeClass as v, withDirectives as x, vModelText as k, normalizeStyle as C, Fragment as u, renderList as f, createStaticVNode as S, vModelSelect as z } from "vue";
 const N = { id: "v-data-table-container" }, L = {
   class: "mb-1",
