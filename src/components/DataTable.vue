@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import '../assets/main.css'
 import { ref, defineEmits } from "vue";
 import { Item, Column, SortBy, ColumnFilter } from "../interfaces/index";
 

@@ -1,3 +1,4 @@
+import '../assets/main.css';
 import { Item, Column } from "../interfaces/index";
 interface Props {
     columns: Column[];
