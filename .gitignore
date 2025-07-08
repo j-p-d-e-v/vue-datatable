@@ -3,3 +3,5 @@ node_modules
 mock-server/__pycache__
 mock-server/*.pyc
 yarn-error.log
+package-lock.json
+yarn.lock
